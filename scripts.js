@@ -15,7 +15,6 @@ let explainerText = document.getElementById("explainer");
 // reload page when I click on title 
 reloader.addEventListener("click", function() {
 	reloader = location.reload();
-
 })
 
 button.addEventListener("click", function () {
