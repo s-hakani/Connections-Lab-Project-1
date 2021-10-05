@@ -23,7 +23,15 @@
 
   <section class="container-main">
     <div class="content" id="content-button-one">
-      <p>Welcome! We are glad to have you here. This is a container of the wishes, dreams, goals, and desires of queer people of faith around the world. Our goal is that this space provides you community, comfort, and peace knowing that someone is wishing you well and thinking of your prayer. We hope that you share a prayer and receive one, and make sure to check out the prayer gallery to see our full archive.</p>
+      <p id="intro-text">Welcome! We are glad to have you here. This is a container of the wishes, dreams, goals, and desires of queer people of faith around the world. Our goal is that this space provides you community, comfort, and peace knowing that someone is wishing you well and thinking of your prayer.</p>
+
+      <p id="intro-text">We hope that you share a prayer and receive one, and make sure to check out the prayer gallery to see our full archive.</p>
+        <div id = "photo-format">
+          <img class = "center" id = "hands" src="media/Shirin Neshat Hands.jpeg"
+           width = 500px/>
+          <p id = "caption">Work by Shirin Neshat</p>
+
+        </div>
     </div>
 
     <div class="content" id="content-button-two">
@@ -34,35 +42,36 @@
         <li>Share out your prayer request in the chat box below and let it flow into the ether. It will also be
           available on our prayer gallery for future visitors!</li>
         <br>
-        <li>Remember, when you give one, you get one. This work is communal. Take in the prayer request that is shared
-          with you in return when you submit, and carve out a minute or more to reflect on it and share your prayer with
-          the requester.</li>
-      </ol>
 
-
-      <section class="form-container">
+        <section class="form-container">
           <h2 class="form-subheading">Enter your prayer request here:</h2>
 
           <div class = "prayer-entry">
             <input id="prayer-input"></input>
             <button id="prayer-button">SUBMIT YOUR PRAYER</button>
           </div>
+          <br>
+          <br>
 
+      </section>
+
+        <li>Remember, when you give one, you get one. This work is communal. Take in the prayer request that is shared
+          with you in return when you submit, and carve out a minute or more to reflect on it and share your prayer with the requester.</li>
+          <br>
           <h2 class = "project-heading">The prayer you get in exchange is: <span id="prayer-text"></span></h2>
           
           <div class="prayer-info">
               <h3 class = "prayer-text" id="p-text"></h3>
               <p class="prayer-loc" id ="p-loc"></p>
           </div>
-      </section>
-      
 
+      </ol>
+      
     </div>
 
     <div class="content" id="content-button-three">
       <h2>Welcome to our Prayer Gallery!</h2>
-      <p>Here, you can see the archive of all of the prayers submitted from around the world. Feel free to scroll
-        through and share your good wishes to those who are asking.</p>
+      <p>Here, you can see the archive of all of the prayers submitted from around the world. Feel free to scroll through and share your good wishes to those who are asking.</p>
     </div>
   </section>
   <script src="scripts.js"></script>

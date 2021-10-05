@@ -19,10 +19,15 @@ html, body {
   left: 0;
 }
 
+.content {
+	font-family: monospace;
+  }
+
 #explainer {
 	padding-top: 525px;
 	padding-left: 30px;
 	padding-right:30px;
+	margin-bottom: 10px;
 	text-align: center;
 	font-size: medium;
 	font-style: italic;
@@ -49,6 +54,13 @@ h1{
 .prayer-entry {
 	display: flex;
 	flex-direction: column;
+}
+
+#prayer-text {
+	font-size: larger;
+	display: flex;
+	flex-direction: column;
+	margin-top: 20px;
 }
 
 .nav-button{
@@ -111,4 +123,40 @@ h2 {
     text-align: center;
     font-size: large;
     font-weight: 900;
+}
+
+.center {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
+	padding: 20px;
+  }
+
+#content-button-one {
+	display: flex;
+	align-items: center;
+}
+
+#caption {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	margin-top: 0px;
+	padding: 0px;
+}
+
+#intro-text {
+	font-size: large;
+}
+
+.form-container {
+	display: flex;
+	flex-direction: column;
+
+}
+
+#prayer-button {
+	width: 50%;
+    margin: 10px;
+	align-self: center;
 }

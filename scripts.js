@@ -40,8 +40,7 @@ button.addEventListener("click", function () {
 			// Check if its working
 			console.log(prayerArray.length);
 
-			let prayerElement = document.getElementById("prayer-text")
-			debugger;
+			let prayerElement = document.getElementById("prayer-text");
 			prayerElement.innerHTML = data.prayers[randomNum].prayer;
 		})
 }

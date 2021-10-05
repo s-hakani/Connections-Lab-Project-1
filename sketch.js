@@ -93,6 +93,8 @@ function draw() {
   // Also want to play with animating the text to have it flowing more (time permitting)
 
   if (pageNumber == 2) {
+    colorMode(RGB);
+
     //Clearing the old gradient background 
     //This clear doesn't seem to be clearing the other buttons, something about the gradient is building from each button.
     clear();
