@@ -1,6 +1,7 @@
 //adapted from Allison Parish's walk through here 
 // https://creative-coding.decontextualize.com/changes-over-time/
 
+// STUCK HERE: If i click on the prayer gallery first, I have to hard reload to clear it!! What is that about?! 
 
 // this is from me testing out why the backgrounds are keeping their history and drawing on top of each other! still haven't figured this out... 
 let origC1, origC2, origN, origNewC, c1, c2, n, newc, myCanvas;
@@ -72,6 +73,7 @@ function draw() {
       line(0,y,width, y);
         } 
     }
+
   if (pageNumber == 1) {
     clear();
     c1 = color(255);
