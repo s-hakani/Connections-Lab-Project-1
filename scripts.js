@@ -1,4 +1,5 @@
 let pageNumber = -1;
+let prayersArray; 
 
 //Select for all of the buttons
 let navButtons = document.getElementsByClassName('nav-button');
@@ -25,6 +26,7 @@ button.addEventListener("click", function () {
 	//Capturing the prayer that is inputted
 	console.log("The prayer available is: " + inputText);
 
+	//Change this to be independent of the button being clicked (the fetch! )
 	fetch('prayers.json')
 		.then(function (response) {
 			return response.json();
@@ -55,6 +57,38 @@ for (let i = 0; i < navButtons.length; i++) {
 		
 		explainerText.style.display = "none";
 		pageNumber = i;
+		clear();
+		if (pageNumber == 2) {
+			background("lavender");
+		}
+
+		if (pageNumber == 0) {
+			// clear();
+			c1 = color(255);
+			c2 = color(60, 40, 90);
+		  
+			for(let y=0; y<height; y++){
+			  n = map(y,0,height,0,1);
+			  newc = lerpColor(c1,c2,n);
+			  stroke(newc);
+			  line(0,y,width, y);
+				} 
+			}
+
+		if (pageNumber == 1) {
+			// clear();
+			c1 = color(255);
+			c2 = color(30, 40, 90);
+			
+			for(let y=0; y<height; y++){
+				n = map(y,0,height,0,1);
+				newc = lerpColor(c1,c2,n);
+				stroke(newc);
+				line(0,y,width, y);
+				} 
+			}
+		
+		// ADD THIS: with the -1, the default is there is some content there. Needs to be set seperately 
 
 		for (let j = 0; j < navButtons.length; j++) {
 			navButtons[j].style.backgroundColor = "white";

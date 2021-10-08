@@ -61,31 +61,33 @@ function draw() {
   
   // About page & Submit page background 
 
-  if (pageNumber == 0) {
-    clear();
-    c1 = color(255);
-    c2 = color(60, 40, 90);
-  
-    for(let y=0; y<height; y++){
-      n = map(y,0,height,0,1);
-      newc = lerpColor(c1,c2,n);
-      stroke(newc);
-      line(0,y,width, y);
-        } 
-    }
+  // Moving these also inside of the script.js rather than within this draw loop 
 
-  if (pageNumber == 1) {
-    clear();
-    c1 = color(255);
-    c2 = color(30, 40, 90);
+  // if (pageNumber == 0) {
+  //   // clear();
+  //   c1 = color(255);
+  //   c2 = color(60, 40, 90);
   
-    for(let y=0; y<height; y++){
-      n = map(y,0,height,0,1);
-      newc = lerpColor(c1,c2,n);
-      stroke(newc);
-      line(0,y,width, y);
-        } 
-    }
+  //   for(let y=0; y<height; y++){
+  //     n = map(y,0,height,0,1);
+  //     newc = lerpColor(c1,c2,n);
+  //     stroke(newc);
+  //     line(0,y,width, y);
+  //       } 
+  //   }
+
+  // if (pageNumber == 1) {
+  //   // clear();
+  //   c1 = color(255);
+  //   c2 = color(30, 40, 90);
+  
+  //   for(let y=0; y<height; y++){
+  //     n = map(y,0,height,0,1);
+  //     newc = lerpColor(c1,c2,n);
+  //     stroke(newc);
+  //     line(0,y,width, y);
+  //       } 
+  //   }
 
   // Prayer gallery sketch - This is not running as it is on the p5.js sketch 
   // https://preview.p5js.org/shakani/present/C5dBiKZ6N
@@ -97,20 +99,22 @@ function draw() {
 
     //Clearing the old gradient background 
     //This clear doesn't seem to be clearing the other buttons, something about the gradient is building from each button.
-    clear();
+    // clear(); - Need to run this AFTER the button gets clicked
 
     // Soothing color 
-    background("lavender");
+    // background("lavender");
 
     let arrayLength = prayerArray.length;
     let randomPrayer = (Math.floor(random(0,arrayLength)));
     
+
+    // in the p5 code, background is in set up 
     textSize(24);
     noStroke();
     fill(random(80),random(80),random(200), 70);
     if (Date.now() - timeLastUpdated > TIME_BETWEEN_RANDOMIZATIONS) {
-      text(prayerArray[randomPrayer], random(window.innerWidth), random(window.innerHeight));
-    timeLastUpdated = Data.now();
+      text(prayerArray[randomPrayer], random(window.innerWidth)-300, random(window.innerHeight));
+    timeLastUpdated = Date.now();
     }
 
 
