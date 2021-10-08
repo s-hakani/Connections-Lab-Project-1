@@ -1,5 +1,5 @@
 let pageNumber = -1;
-let prayersArray; 
+let prayersArray;
 
 //Select for all of the buttons
 let navButtons = document.getElementsByClassName('nav-button');
@@ -14,7 +14,7 @@ let reloader = document.getElementById("title");
 let explainerText = document.getElementById("explainer");
 
 // reload page when I click on title 
-reloader.addEventListener("click", function() {
+reloader.addEventListener("click", function () {
 	reloader = location.reload();
 })
 
@@ -54,7 +54,7 @@ for (let i = 0; i < navButtons.length; i++) {
 		// Loop through all of the buttons 
 		// Set the background to all buttons to white which is what they are right now
 		// And then navButton to black only 
-		
+
 		explainerText.style.display = "none";
 		pageNumber = i;
 		clear();
@@ -66,41 +66,41 @@ for (let i = 0; i < navButtons.length; i++) {
 			// clear();
 			c1 = color(255);
 			c2 = color(60, 40, 90);
-		  
-			for(let y=0; y<height; y++){
-			  n = map(y,0,height,0,1);
-			  newc = lerpColor(c1,c2,n);
-			  stroke(newc);
-			  line(0,y,width, y);
-				} 
+
+			for (let y = 0; y < height; y++) {
+				n = map(y, 0, height, 0, 1);
+				newc = lerpColor(c1, c2, n);
+				stroke(newc);
+				line(0, y, width, y);
 			}
+		}
 
 		if (pageNumber == 1) {
 			// clear();
 			c1 = color(255);
 			c2 = color(30, 40, 90);
-			
-			for(let y=0; y<height; y++){
-				n = map(y,0,height,0,1);
-				newc = lerpColor(c1,c2,n);
+
+			for (let y = 0; y < height; y++) {
+				n = map(y, 0, height, 0, 1);
+				newc = lerpColor(c1, c2, n);
 				stroke(newc);
-				line(0,y,width, y);
-				} 
+				line(0, y, width, y);
 			}
-		
+		}
+
 		// ADD THIS: with the -1, the default is there is some content there. Needs to be set seperately 
 
 		for (let j = 0; j < navButtons.length; j++) {
 			navButtons[j].style.backgroundColor = "white";
 			navButtons[j].style = "teal";
 		}
-		
+
 		// **** TO-DO I want the text color to remain white when the button is black. 
-		navButtons[i].style.backgroundColor = "black";	
+		navButtons[i].style.backgroundColor = "black";
 
 		// Hide all of the content
 		let allContent = document.getElementsByClassName('content');
-		
+
 		for (let k = 0; k < allContent.length; k++) {
 			allContent[k].style.display = "none";
 		}

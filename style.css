@@ -145,8 +145,10 @@ h2 {
 	padding: 0px;
 }
 
-.intro-text {
+/* Had to add this in because now the page -1 never loads in the loop.  */
+#content-button-one {
 	font-size: large;
+	display: none
 	  
 }
 
